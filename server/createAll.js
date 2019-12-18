@@ -54,6 +54,7 @@ module.exports = function createAll() {
               execSync('git add -A', {cwd: '../'});
               execSync('git commit -am "new book 💐"', {cwd: '../'});
               execSync('git push origin master', {cwd: '../'});
+              console.log('gitbook上传成功✅');
             })
           })
         } catch (err) {
