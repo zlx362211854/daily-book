@@ -5,7 +5,7 @@ const createmd = function({name, text}) {
     if (err) {
       console.log(err);
     }
-    console.log("文件write成功");
+    console.log("文件"+ name +"创建成功");
   });
 }
 module.exports = createmd

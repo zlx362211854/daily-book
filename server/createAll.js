@@ -3,9 +3,11 @@ const path = require('path')
 const ajax = require("./request/ajax")
 const createmd = require("./createmd")
 const moment = require('moment')
+const execSync = require('child_process').execSync;
 module.exports = function createAll() {
   ajax({url: 'https://api.github.com/repos/zlx362211854/daily-study/issues?per_page=1000'}).then((body) => {
     if (body) {
+      console.log('获取issues成功')
       if (typeof body === 'string') {
         try {
           body = JSON.parse(body);
@@ -45,6 +47,13 @@ module.exports = function createAll() {
                 return false;
               }
               console.log('summary写入成功');
+              console.log('更新完成✅');
+              execSync('gitbook build', {cwd: '../'});
+              execSync('rm -rf ./docs', {cwd: '../'});
+              execSync('mv ./_book ./docs', {cwd: '../'});
+              execSync('git add -A', {cwd: '../'});
+              execSync('git commit -am "new book 💐"', {cwd: '../'});
+              execSync('git push origin master', {cwd: '../'});
             })
           })
         } catch (err) {
