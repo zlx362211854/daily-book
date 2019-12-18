@@ -48,8 +48,8 @@ module.exports = function createAll() {
               }
               console.log('summary写入成功');
               console.log('更新完成✅,开始gitbook打包...');
-              execSync('gitbook build', {cwd: '../'});
               execSync('rm -rf ./docs', {cwd: '../'});
+              execSync('gitbook build', {cwd: '../'});
               execSync('mv ./_book ./docs', {cwd: '../'});
               execSync('git add -A', {cwd: '../'});
               execSync('git commit -am "new book 💐"', {cwd: '../'});
