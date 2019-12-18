@@ -5,7 +5,7 @@ const createmd = require("./createmd")
 const moment = require('moment')
 const execSync = require('child_process').execSync;
 module.exports = function createAll() {
-  ajax({url: 'https://api.github.com/repos/zlx362211854/daily-study/issues?per_page=1000'}).then((body) => {
+  ajax({url: 'https://api.github.com/repos/zlx362211854/daily-study/issues?client_id=f5690a13cfb0791a8598&client_secret=98d8d9720fe4d89a700cc8ead6970271018f8e2a&per_page=1000'}).then((body) => {
     if (body) {
       console.log('获取issues成功')
       if (typeof body === 'string') {
@@ -15,7 +15,7 @@ module.exports = function createAll() {
           const promiseList = []
           for (let i = 0; i < body.length; i++) {
             const item = body[i]
-            const promise = ajax({url: item.comments_url})
+            const promise = ajax({url: item.comments_url + "?client_id=f5690a13cfb0791a8598&client_secret=98d8d9720fe4d89a700cc8ead6970271018f8e2a"})
             promiseList.push(promise)
             promise.then((data) => {
               Promise.resolve(data)
