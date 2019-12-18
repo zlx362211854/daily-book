@@ -47,7 +47,7 @@ module.exports = function createAll() {
                 return false;
               }
               console.log('summary写入成功');
-              console.log('更新完成✅');
+              console.log('更新完成✅,开始gitbook打包...');
               execSync('gitbook build', {cwd: '../'});
               execSync('rm -rf ./docs', {cwd: '../'});
               execSync('mv ./_book ./docs', {cwd: '../'});
