@@ -15,28 +15,30 @@ module.exports = function createAll() {
           const promiseList = []
           for (let i = 0; i < body.length; i++) {
             const item = body[i]
-            const promise = ajax({url: item.comments_url + "?client_id=f5690a13cfb0791a8598&client_secret=98d8d9720fe4d89a700cc8ead6970271018f8e2a"})
-            promiseList.push(promise)
-            promise.then((data) => {
-              Promise.resolve(data)
+            const promise = new Promise((resolve) => {
+              ajax({url: item.comments_url + "?client_id=f5690a13cfb0791a8598&client_secret=98d8d9720fe4d89a700cc8ead6970271018f8e2a"}).then(data => {
+                resolve(data)
+              })
             })
+            promiseList.push(promise)
           }
-          Promise.all(promiseList).then((issues) => {
-            issues.forEach((issue, index) => {
+          Promise.all(promiseList).then((commentsList) => {
+            commentsList.forEach((comments, index) => {
               try {
-                const data = JSON.parse(issue)
-                let comments = ''
+                const issue = body[index]
+                const data = JSON.parse(comments)
+                let commentsStr = `\r\n # ${issue.title} \r\n ${issue.body} \r\n ***`
                 data.forEach(comment => {
-                  comments += `\r\n# ${comment.user.login} \r\n > commented ${moment(comment.created_at).fromNow()} \r\n\r\n` + comment.body
+                  commentsStr += `\r\n## ${comment.user.login} \r\n > commented ${moment(comment.created_at).fromNow()} \r\n\r\n` + comment.body
                     .replace(/```/g, '\r\n```')
                     .replace(/{{/g, '{% raw %}{{')
                     .replace(/}}/g, '}}{% endraw %}')
                 })
                 createmd({
                   name: body[index].id + '.md',
-                  text: comments
+                  text: commentsStr
                 })
-                summary += `\r\n* [${body[index].title}](./md/${body[index].id}.md)`
+                summary += `\r\n* [${issue.title}](./md/${issue.id}.md)`
               } catch (err) {
                 console.log(err)
               }
@@ -64,3 +66,16 @@ module.exports = function createAll() {
     }
   })
 }
+
+var arr = [1, 2, 3]
+var list = []
+arr.forEach((i, index) => {
+  var p = new Promise((resolve) => {
+    resolve({name: i, val: index})
+  })
+  list.push(p)
+})
+
+Promise.all(list).then((a, b) => {
+  console.log(a, b, '77')
+})
