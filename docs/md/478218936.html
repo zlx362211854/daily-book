@@ -1,0 +1,1661 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>14. 介绍一下DataTransfer对象 · daily study</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zlx">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="477591822.html" />
+    
+    
+    <link rel="prev" href="478808031.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="539469366.html">
+            
+                <a href="539469366.html">
+            
+                    
+                    98. 说一说一些常见的跨域场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="538689754.html">
+            
+                <a href="538689754.html">
+            
+                    
+                    97. What's the output and why?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="538156555.html">
+            
+                <a href="538156555.html">
+            
+                    
+                    96. 算法题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="536812996.html">
+            
+                <a href="536812996.html">
+            
+                    
+                    95. 说说WebAssembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="536018677.html">
+            
+                <a href="536018677.html">
+            
+                    
+                    94. what's the output and why?  
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="535432432.html">
+            
+                <a href="535432432.html">
+            
+                    
+                    93.各种图片格式的特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="534646149.html">
+            
+                <a href="534646149.html">
+            
+                    
+                    92.http 常见的状态码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="533762204.html">
+            
+                <a href="533762204.html">
+            
+                    
+                    91. 说说redux中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="533073496.html">
+            
+                <a href="533073496.html">
+            
+                    
+                    90. requestIdleCallback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="532377435.html">
+            
+                <a href="532377435.html">
+            
+                    
+                    89.谈谈 IntersectionObserver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="531679837.html">
+            
+                <a href="531679837.html">
+            
+                    
+                    88.ssr 的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="530839968.html">
+            
+                <a href="530839968.html">
+            
+                    
+                    87. 什么是敏捷开发？如何看待？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="530085622.html">
+            
+                <a href="530085622.html">
+            
+                    
+                    86. useEffect vs useLayoutEffect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="529655790.html">
+            
+                <a href="529655790.html">
+            
+                    
+                    85.发布订阅模式和观察者模式区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="529069818.html">
+            
+                <a href="529069818.html">
+            
+                    
+                    84.V8 引擎如何进行垃圾内存的回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="528443361.html">
+            
+                <a href="528443361.html">
+            
+                    
+                    83. 递归函数输出是什么，为什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="527763739.html">
+            
+                <a href="527763739.html">
+            
+                    
+                    82. useCallback vs useMemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="527020238.html">
+            
+                <a href="527020238.html">
+            
+                    
+                    81.数组递归降维方法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="526548071.html">
+            
+                <a href="526548071.html">
+            
+                    
+                    80.defer和async区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="525365970.html">
+            
+                <a href="525365970.html">
+            
+                    
+                    79. 说说 ES6 Iterator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="524644491.html">
+            
+                <a href="524644491.html">
+            
+                    
+                    78. useImperativeHandle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="524155741.html">
+            
+                <a href="524155741.html">
+            
+                    
+                    77. 谈谈对 React Suspense 的理解和看法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="522575820.html">
+            
+                <a href="522575820.html">
+            
+                    
+                    76.  Js有哪些作用域？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="521893947.html">
+            
+                <a href="521893947.html">
+            
+                    
+                    75. getElementById 和 querySelector 有什么区别？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="521272350.html">
+            
+                <a href="521272350.html">
+            
+                    
+                    74.前端如何通过网页启动本地 PC 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="520700544.html">
+            
+                <a href="520700544.html">
+            
+                    
+                    73.在 ES6 中使用展开(spread)语法有什么好处? 它与剩余(rest)语法有什么不同?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="519633056.html">
+            
+                <a href="519633056.html">
+            
+                    
+                    72. var c = d = 'xx' 这样声明变量有什么问题？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="518843542.html">
+            
+                <a href="518843542.html">
+            
+                    
+                    71. 深克隆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="518213833.html">
+            
+                <a href="518213833.html">
+            
+                    
+                    70.Fetch 与 Ajax 的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="517501511.html">
+            
+                <a href="517501511.html">
+            
+                    
+                    69.['1', '2', '3'].map(parseInt)的输出结果是什么？['1', '2', '3'].fliter(parseInt)的输出结果是什么？为什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="516946657.html">
+            
+                <a href="516946657.html">
+            
+                    
+                    68. 说说grid布局和flex布局，grid布局和flex布局优劣势，各有什么适用场景？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="515774723.html">
+            
+                <a href="515774723.html">
+            
+                    
+                    67. Web Worker 优化性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="514349905.html">
+            
+                <a href="514349905.html">
+            
+                    
+                    66.typeof和instance of 检测数据类型有什么区别？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="513713504.html">
+            
+                <a href="513713504.html">
+            
+                    
+                    65. 环境变量是什么？有什么作用？如何设置？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="513028117.html">
+            
+                <a href="513028117.html">
+            
+                    
+                    64. Promise.then 执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="512253809.html">
+            
+                <a href="512253809.html">
+            
+                    
+                    63. 有趣的代码题（共2道，解题请阐述原理）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="511669601.html">
+            
+                <a href="511669601.html">
+            
+                    
+                    62.iframe高度自适应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="511031791.html">
+            
+                <a href="511031791.html">
+            
+                    
+                    61. nginx是什么，举例说明如何使用？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="510317379.html">
+            
+                <a href="510317379.html">
+            
+                    
+                    60. 柯里化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="509684801.html">
+            
+                <a href="509684801.html">
+            
+                    
+                    59.举例封装 ES6 和 ES5 的继承（Son 继承 Father）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="508823690.html">
+            
+                <a href="508823690.html">
+            
+                    
+                    58.解析 URL Params 为对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="508179830.html">
+            
+                <a href="508179830.html">
+            
+                    
+                    57. SSH是什么，如何实现SSH免密登陆？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="507504833.html">
+            
+                <a href="507504833.html">
+            
+                    
+                    56. 实现 Vue 响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="506945745.html">
+            
+                <a href="506945745.html">
+            
+                    
+                    55.谈谈对 CSP（Content Security Policy） 的理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="506410702.html">
+            
+                <a href="506410702.html">
+            
+                    
+                    54.给定两个数组，写一个方法来计算它们的交集和并集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="506136264.html">
+            
+                <a href="506136264.html">
+            
+                    
+                    53. 说说浏览器的缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="505532846.html">
+            
+                <a href="505532846.html">
+            
+                    
+                    52. 时间切片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="504969508.html">
+            
+                <a href="504969508.html">
+            
+                    
+                    51.谈谈对 Node.js 异步 IO 机制的理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="499978068.html">
+            
+                <a href="499978068.html">
+            
+                    
+                    50. 常见的浏览器内核有哪些?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="499707520.html">
+            
+                <a href="499707520.html">
+            
+                    
+                    49.尽最大可能详细描述强缓存和协商缓存步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="499277376.html">
+            
+                <a href="499277376.html">
+            
+                    
+                    48.前端如何实现即时通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="498674409.html">
+            
+                <a href="498674409.html">
+            
+                    
+                    47. 实现中文名根据首字母排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="497945191.html">
+            
+                <a href="497945191.html">
+            
+                    
+                    46. 如何获取页面渲染时间？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="497469843.html">
+            
+                <a href="497469843.html">
+            
+                    
+                    45. 为什么 V8 JS引擎更快？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="496860388.html">
+            
+                <a href="496860388.html">
+            
+                    
+                    44.React怎么做数据的检查和变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="496100019.html">
+            
+                <a href="496100019.html">
+            
+                    
+                    43. 介绍下函数式编程和柯里化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="495475579.html">
+            
+                <a href="495475579.html">
+            
+                    
+                    42. Map 和 WeakMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="494929336.html">
+            
+                <a href="494929336.html">
+            
+                    
+                    41. [] + {} 和 {} + [] 的 结果一样吗？为什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="494420726.html">
+            
+                <a href="494420726.html">
+            
+                    
+                    40.首屏加载优化方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="493806102.html">
+            
+                <a href="493806102.html">
+            
+                    
+                    39. 什么是高阶函数，高阶组件？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="492487567.html">
+            
+                <a href="492487567.html">
+            
+                    
+                    38. 验证密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="491980672.html">
+            
+                <a href="491980672.html">
+            
+                    
+                    37. Webpack篇 —— 什么是 Tree Shaking ?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="491347654.html">
+            
+                <a href="491347654.html">
+            
+                    
+                    36. word-wrap、word-break和white-space有什么区别？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="490834134.html">
+            
+                <a href="490834134.html">
+            
+                    
+                    35. 介绍下REST api和GraphQL api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="490141729.html">
+            
+                <a href="490141729.html">
+            
+                    
+                    34.svg和canvas的概念和区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="489421010.html">
+            
+                <a href="489421010.html">
+            
+                    
+                    33. 介绍下 BFC、IFC、GFC 和 FFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="488949432.html">
+            
+                <a href="488949432.html">
+            
+                    
+                    32. 说说transition、animation、transform的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="488366130.html">
+            
+                <a href="488366130.html">
+            
+                    
+                    31.介绍下前端加密的常见场景和方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="487935466.html">
+            
+                <a href="487935466.html">
+            
+                    
+                    30. JavaScript 继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="487235572.html">
+            
+                <a href="487235572.html">
+            
+                    
+                    29. 说说React hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="486690499.html">
+            
+                <a href="486690499.html">
+            
+                    
+                    28.React组件通信方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="486055365.html">
+            
+                <a href="486055365.html">
+            
+                    
+                    27. 实现千位分隔符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="485012263.html">
+            
+                <a href="485012263.html">
+            
+                    
+                    26. 谈谈js中this指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="484236776.html">
+            
+                <a href="484236776.html">
+            
+                    
+                    25. 模拟实现 new 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="483723241.html">
+            
+                <a href="483723241.html">
+            
+                    
+                    24.解释DOM的事件流和事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="483146955.html">
+            
+                <a href="483146955.html">
+            
+                    
+                    23. 发布一个包到npm仓库，打印：hello world即可。
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.78" data-path="482570062.html">
+            
+                <a href="482570062.html">
+            
+                    
+                    22.校验代码括弧是否有效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.79" data-path="482065375.html">
+            
+                <a href="482065375.html">
+            
+                    
+                    21.请详细描述AJAX的工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.80" data-path="481411791.html">
+            
+                <a href="481411791.html">
+            
+                    
+                    20. 寻找数组中的单一元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.81" data-path="480949017.html">
+            
+                <a href="480949017.html">
+            
+                    
+                    19. Cookie，Session，Token
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.82" data-path="480434698.html">
+            
+                <a href="480434698.html">
+            
+                    
+                    18.箭头函数与普通函数（function）的区别是什么？构造函数（function）可以使用 new 生成实例，那么箭头函数可以吗？为什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.83" data-path="479919899.html">
+            
+                <a href="479919899.html">
+            
+                    
+                    17. 自己实现一个Math.pow()函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.84" data-path="479435285.html">
+            
+                <a href="479435285.html">
+            
+                    
+                    16. 浏览器输入 URL 到页面呈现，中间发生了什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.85" data-path="478808031.html">
+            
+                <a href="478808031.html">
+            
+                    
+                    15.使div 水平垂直居中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.86" data-path="478218936.html">
+            
+                <a href="478218936.html">
+            
+                    
+                    14. 介绍一下DataTransfer对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.87" data-path="477591822.html">
+            
+                <a href="477591822.html">
+            
+                    
+                    13. 介绍下浏览器的重绘和回流（Repaint & Reflow）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.88" data-path="477126711.html">
+            
+                <a href="477126711.html">
+            
+                    
+                    12.算法题之「移动零」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.89" data-path="476844897.html">
+            
+                <a href="476844897.html">
+            
+                    
+                    11. 什么是一致性hash算法，有什么用处？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.90" data-path="475950345.html">
+            
+                <a href="475950345.html">
+            
+                    
+                    10. JavaScript 模块化是什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.91" data-path="475437756.html">
+            
+                <a href="475437756.html">
+            
+                    
+                    9.什么是视差滚动？如何实现视差滚动的效果？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.92" data-path="474889850.html">
+            
+                <a href="474889850.html">
+            
+                    
+                    8. 谈谈https加密是怎么实现的？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.93" data-path="474320597.html">
+            
+                <a href="474320597.html">
+            
+                    
+                    7. 节流和防抖是什么？有什么区别？怎么实现？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.94" data-path="473809845.html">
+            
+                <a href="473809845.html">
+            
+                    
+                    6.setTimeout、Promise、Async/Await 的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.95" data-path="473193718.html">
+            
+                <a href="473193718.html">
+            
+                    
+                    5. javascript是单线程语言，那他的异步机制是怎么实现的？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.96" data-path="473068405.html">
+            
+                <a href="473068405.html">
+            
+                    
+                    4. Draw a triangle with css
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.97" data-path="472726745.html">
+            
+                <a href="472726745.html">
+            
+                    
+                    3. 用css实现玻璃磨砂效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.98" data-path="472617901.html">
+            
+                <a href="472617901.html">
+            
+                    
+                    2. ajax产生二次请求原因及解决方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.99" data-path="472174580.html">
+            
+                <a href="472174580.html">
+            
+                    
+                    1. js观察者模式如何实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >14. 介绍一下DataTransfer对象</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="14-&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;datatransfer&#x5BF9;&#x8C61;">14. &#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;DataTransfer&#x5BF9;&#x8C61;</h1>
+<hr>
+<h2 id="zlx362211854">zlx362211854</h2>
+<blockquote>
+<p>commented 4 months ago </p>
+</blockquote>
+<h3 id="1&#x5143;&#x7D20;&#x7684;&#x53EF;&#x62D6;&#x62FD;&#x5C5E;&#x6027;">1.&#x5143;&#x7D20;&#x7684;&#x53EF;&#x62D6;&#x62FD;&#x5C5E;&#x6027;</h3>
+<p> html5&#x4E2D;&#x589E;&#x52A0;&#x4E86;&#x5143;&#x7D20;&#x62D6;&#x62FD;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;draggable&#xFF1A;true&#x540E;&#xFF0C;&#x5143;&#x7D20;&#x5C31;&#x88AB;&#x8D4B;&#x4E88;&#x4E86;&#x53EF;&#x62D6;&#x62FD;&#x7684;&#x80FD;&#x529B;&#x3002;</p>
+<p>&#x5F53;&#x5143;&#x7D20;&#x53EF;&#x62D6;&#x62FD;&#x540E;&#xFF0C;&#x53EF;&#x7ED9;&#x5143;&#x7D20;&#x6DFB;&#x52A0;6&#x7C7B;&#x62D6;&#x62FD;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#xFF1A;</p>
+<ul>
+<li>dragstart&#xFF0C;&#x5F00;&#x59CB;&#x62D6;&#x62FD;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>dragenter&#xFF0C; &#x62D6;&#x62FD;&#x8FDB;&#x5165;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>dragleave&#xFF0C; &#x62D6;&#x62FD;&#x79BB;&#x5F00;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>dragover&#xFF0C; &#x62D6;&#x62FD;over&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>drop&#xFF0C;&#x62D6;&#x62FD;&#x91CA;&#x653E;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>dragend&#xFF0C; &#x62D6;&#x62FD;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;&#x3002;<h3 id="2-&#x62D6;&#x62FD;&#x4E2D;&#x7684;datatransfer&#x5BF9;&#x8C61;&#x3002;">2. &#x62D6;&#x62FD;&#x4E2D;&#x7684;dataTransfer&#x5BF9;&#x8C61;&#x3002;</h3>
+<strong>dataTransfer</strong>&#x5BF9;&#x8C61;&#xFF0C;&#x5C31;&#x662F;&#x5143;&#x7D20;&#x62D6;&#x62FD;&#x4E8B;&#x4EF6;&#x4E2D;&#x7684;&#x62D6;&#x62FD;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x62D6;&#x62FD;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&apos;test&apos;</span>&gt;</span>Drag the file here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript">   <span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;test&apos;</span>);
+    dom.setAttribute(<span class="hljs-string">&apos;draggable&apos;</span>, <span class="hljs-string">&apos;true&apos;</span>); <span class="hljs-comment">// &#x4F7F;&#x5143;&#x7D20;&#x53EF;&#x62D6;&#x62FD;</span>
+    dom.addEventListener(<span class="hljs-string">&apos;dragstart&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;dragstart: &apos;</span> + event.dataTransfer); 
+    });
+</code></pre>
+<h3 id="3-datatransfer&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;">3. DataTransfer&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</h3>
+<p>DataTransfer&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E0B;&#x9762;5&#x4E2A;&#x6807;&#x51C6;&#x5C5E;&#x6027;&#x548C;4&#x4E2A;&#x6807;&#x51C6;&#x65B9;&#x6CD5;&#x3002;</p>
+<h4 id="&#x6807;&#x51C6;&#x5C5E;&#x6027;">&#x6807;&#x51C6;&#x5C5E;&#x6027;</h4>
+<p><strong>DataTransfer.dropEffect</strong>
+&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6240;&#x9009;&#x62D6;&#x653E;&#x64CD;&#x4F5C;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x5C06;&#x62D6;&#x62FD;&#x64CD;&#x4F5C;&#x8BBE;&#x7F6E;&#x4E3A;&#x65B0;&#x7C7B;&#x578B;&#x3002;&#x503C;&#x5FC5;&#x987B;&#x4E3A;none&#xFF0C;copy&#xFF0C;link&#x6216;move&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x3002;
+<strong>DataTransfer.effectAllowed</strong>
+&#x63D0;&#x4F9B;&#x53EF;&#x80FD;&#x7684;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5FC5;&#x987B;&#x662F;none&#xFF0C;copy&#xFF0C;copyLink&#xFF0C;copyMove&#xFF0C;link&#xFF0C;linkMove&#xFF0C;move&#xFF0C;all&#x6216;uninitialized&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x3002;
+<strong>DataTransfer.files</strong>
+&#x62D6;&#x62FD;&#x7684;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x3002;&#x5982;&#x679C;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#x4E0D;&#x6D89;&#x53CA;&#x62D6;&#x52A8;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x6B64;&#x5C5E;&#x6027;&#x4E3A;&#x7A7A;&#x5217;&#x8868;&#x3002;
+<strong>DataTransfer.items</strong> &#xFF08;&#x53EA;&#x8BFB;&#xFF09;
+&#x63D0;&#x4F9B;DataTransferItemList&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x662F;&#x6240;&#x6709;&#x62D6;&#x52A8;&#x6570;&#x636E;&#x7684;&#x5217;&#x8868;&#x3002;
+<strong>DataTransfer.types</strong>&#xFF08;&#x53EA;&#x8BFB;&#xFF09;
+&#x5728;dragstart&#x4E8B;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x3002;</p>
+<h4 id="&#x6807;&#x51C6;&#x65B9;&#x6CD5;">&#x6807;&#x51C6;&#x65B9;&#x6CD5;</h4>
+<p><strong>DataTransfer.clearData([format])</strong>
+&#x5220;&#x9664;&#x4E0E;&#x7ED9;&#x5B9A;&#x7C7B;&#x578B;&#x5173;&#x8054;&#x7684;&#x6570;&#x636E;&#x3002;format&#x53C2;&#x6570;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;&#x5982;&#x679C;&#x7C7B;&#x578B;&#x4E3A;&#x7A7A;&#x6216;&#x672A;&#x6307;&#x5B9A;&#xFF0C;&#x5219;&#x5220;&#x9664;&#x6240;&#x6709;&#x5173;&#x8054;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6216;&#x8005;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x6B64;&#x65B9;&#x6CD5;&#x65E0;&#x6548;&#x3002;
+<strong>DataTransfer.getData(format)</strong>
+&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x4E0D;&#x5305;&#x542B;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+<strong>DataTransfer.setData(format, data)</strong>
+&#x8BBE;&#x7F6E;&#x7ED9;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5728;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;&#xFF0C;&#x4EE5;&#x4F7F;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x9879;&#x6210;&#x4E3A;&#x65B0;&#x683C;&#x5F0F;&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5728;&#x76F8;&#x540C;&#x4F4D;&#x7F6E;&#x628A;&#x73B0;&#x6709;&#x6570;&#x636E;&#x66FF;&#x6362;&#x6389;&#x3002;
+<strong>DataTransfer.setDragImage(img, xOffset, yOffset)</strong>
+&#x8BBE;&#x7F6E;&#x7528;&#x4E8E;&#x62D6;&#x52A8;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x50CF;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7528;&#x5143;&#x7D20;&#x62D6;&#x62FD;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x62D6;&#x62FD;&#x4E0A;&#x4F20;&#x7684;demo&#xFF1A;</p>
+<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&apos;test&apos;</span>&gt;</span>Drag the file here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">&apos;drop&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      e.preventDefault()
+    }, <span class="hljs-literal">false</span>)
+    <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">&apos;dragover&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      e.preventDefault()
+    }, <span class="hljs-literal">false</span>)
+    <span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;test&apos;</span>);
+    dom.setAttribute(<span class="hljs-string">&apos;draggable&apos;</span>, <span class="hljs-string">&apos;true&apos;</span>);
+    dom.addEventListener(<span class="hljs-string">&apos;drop&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;drop: &apos;</span> + event.dataTransfer);   
+        <span class="hljs-keyword">var</span> files = event.dataTransfer.files || [];  
+        <span class="hljs-keyword">if</span> (files[<span class="hljs-number">0</span>]) {
+          upload(files[<span class="hljs-number">0</span>], dom)
+        }
+    });
+<span class="hljs-keyword">var</span> upload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file, dom</span>) </span>{
+      <span class="hljs-keyword">var</span> formData = <span class="hljs-keyword">new</span> FormData();
+      formData.append(<span class="hljs-string">&apos;file&apos;</span>, file);
+      <span class="hljs-comment">// ajax&#x4E0A;&#x4F20;</span>
+      <span class="hljs-keyword">var</span> xhr = <span class="hljs-literal">null</span>;
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>.XMLHttpRequest){
+        xhr=<span class="hljs-keyword">new</span> XMLHttpRequest();
+      }<span class="hljs-keyword">else</span>{
+        xhr=<span class="hljs-keyword">new</span> ActiveXObject(<span class="hljs-string">&quot;Microsoft.XMLHTTP&quot;</span>);
+      }
+      <span class="hljs-comment">// &#x4E0A;&#x4F20;&#x7ED3;&#x675F; </span>
+      xhr.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      &#x3000;&#x3000;<span class="hljs-keyword">var</span> result = <span class="hljs-built_in">JSON</span>.parse(xhr.responseText);
+         <span class="hljs-built_in">console</span>.log(result, <span class="hljs-string">&apos;result&apos;</span>)
+        <span class="hljs-keyword">if</span> (result.code === <span class="hljs-number">1000</span>) {
+          alert(<span class="hljs-string">&apos;&#x4E0A;&#x4F20;&#x6210;&#x529F;&apos;</span>)
+          dom.innerText = file.name
+        }
+      };
+      xhr.open(<span class="hljs-string">&apos;POST&apos;</span>, <span class="hljs-string">&apos;http://localhost:3060/file/uploadAvatar&apos;</span>, <span class="hljs-literal">true</span>); 
+      xhr.send(formData);
+    }
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/22437181/62682407-adc16b00-b9ee-11e9-99dc-95558aca0d54.gif" alt="upload4"></p>
+<p><a href="https://github.com/zlx362211854/drag-upload" target="_blank">demo&#x4EE3;&#x7801;&#x4ED3;&#x5E93;</a></p>
+<p>&#x7528;&#x62D6;&#x62FD;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x62D6;&#x62FD;&#x5217;&#x8868;&#x529F;&#x80FD;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/zlx362211854/animate/master/image/drag.gif" alt="drag"></p>
+<p><a href="https://github.com/zlx362211854/animate/tree/master/drag" target="_blank">demo&#x4EE3;&#x7801;&#x4ED3;&#x5E93;</a></p>
+<h2 id="goldeli">goldEli</h2>
+<blockquote>
+<p>commented 4 months ago </p>
+</blockquote>
+<p><code>dataTransfer</code> &#x4ECE;&#x5B57;&#x9762;&#x7406;&#x89E3;&#xFF0C;&#x5F88;&#x76F4;&#x89C2;&#x5C31;&#x77E5;&#x9053;&#x662F;&#x7528;&#x6765;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7684;&#x3002;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x7684; <code>Drag</code> &#x548C; <code>Drop</code> &#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x7528;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x660E;&#xFF0C;&#x5047;&#x5982;&#x6211;&#x4EEC;&#x6709;&#x4E2A; <code>li</code> &#x7EC4;&#x6210;&#x7684;&#x6C34;&#x679C;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A; <code>li</code> &#x90FD;&#x53EF;&#x4EE5;&#x62D6;&#x52A8;&#xFF0C;&#x628A;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x6C34;&#x679C;&#x62D6;&#x5230;&#x6307;&#x5B9A;&#x533A;&#x57DF;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>What fruits do you like?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dragingArea&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;apple&quot;</span> <span class="hljs-attr">draggable</span>=<span class="hljs-string">&quot;true&quot;</span> &gt;</span>apple<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;banana&quot;</span> <span class="hljs-attr">draggable</span>=<span class="hljs-string">&quot;true&quot;</span> &gt;</span>banana<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;orange&quot;</span> <span class="hljs-attr">draggable</span>=<span class="hljs-string">&quot;true&quot;</span> &gt;</span>orange<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Drop your favorite fruits below:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+  <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border: 1px solid red;height: 200px; width: 200px;&quot;</span>
+  <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dropingArea&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> internalDNDType = <span class="hljs-string">&quot;text/plain&quot;</span>; <span class="hljs-comment">// set this to something specific to your site</span>
+  <span class="hljs-keyword">var</span> dragingArea = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;dragingArea&quot;</span>);
+  <span class="hljs-keyword">var</span> dropingArea = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;dropingArea&quot;</span>);
+
+  dragingArea.addEventListener(<span class="hljs-string">&quot;dragstart&quot;</span>, event =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;dragstart: &apos;</span>, event.target.id);
+    event.dataTransfer.setData(internalDNDType, event.target.id);
+    <span class="hljs-comment">// event.dataTransfer.dropEffect = &apos;copy&apos;;</span>
+  });
+
+  dropingArea.addEventListener(<span class="hljs-string">&quot;dragover&quot;</span>, event =&gt; {
+    event.preventDefault()
+  })
+
+  dropingArea.addEventListener(<span class="hljs-string">&quot;drop&quot;</span>, event =&gt; {
+    <span class="hljs-keyword">var</span> data = event.dataTransfer.getData(internalDNDType)
+    event.target.append(<span class="hljs-built_in">document</span>.getElementById(data))
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;drop&apos;</span>, data)
+  })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x603B;&#x7ED3;&#xFF1A;</p>
+<ul>
+<li>&#x4E3A;&#x5143;&#x7D20;&#x8BBE;&#x7F6E; <code>draggable=&quot;true&quot;</code> &#x5C31;&#x53EF;&#x62D6;&#x52A8;&#x4E86;</li>
+<li><code>dataTransfer.setData</code> &#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+<li>&#x62D6;&#x8FC7;&#x8FC7;&#x7A0B;&#x901A;&#x8FC7; <code>dragstart</code>&#xFF0C;<code>dragover</code>&#xFF0C;<code>drop</code> &#x7B49;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x76D1;&#x542C;&#x3002;</li>
+</ul>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html" target="_blank">dnd</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer" target="_blank">DataTransfer</a><h2 id="roxy0724">roxy0724</h2>
+<blockquote>
+<p>commented 4 months ago </p>
+</blockquote>
+</li>
+</ul>
+<p><code>DataTransfer</code>&#x662F;&#x5728;&#x8FDB;&#x884C;&#x62D6;&#x653E;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x62D6;&#x653E;&#x52A8;&#x4F5C;&#xFF0C;&#x62D6;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6570;&#x636E;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x4E00;&#x9879;&#x6216;&#x591A;&#x9879;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x79CD;&#x6216;&#x591A;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x6700;&#x57FA;&#x7840;&#x7684;&#x5E94;&#x7528;&#x5C31;&#x662F;<code>getData</code>&#x548C;<code>setData</code>&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;source&apos;</span>).ondragstart = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    event.dataTransfer.setData(<span class="hljs-string">&apos;key&apos;</span>,<span class="hljs-string">&apos;value&apos;</span>)
+}
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;target&apos;</span>).ondrop = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    event.preventDefault()
+    <span class="hljs-keyword">const</span> value = event.dataTransfer.getData(<span class="hljs-string">&apos;key&apos;</span>)
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="478808031.html" class="navigation navigation-prev " aria-label="Previous page: 15.使div 水平垂直居中">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="477591822.html" class="navigation navigation-next " aria-label="Next page: 13. 介绍下浏览器的重绘和回流（Repaint & Reflow）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"14. 介绍一下DataTransfer对象","level":"1.86","depth":1,"next":{"title":"13. 介绍下浏览器的重绘和回流（Repaint & Reflow）","level":"1.87","depth":1,"path":"md/477591822.md","ref":"./md/477591822.md","articles":[]},"previous":{"title":"15.使div 水平垂直居中","level":"1.85","depth":1,"path":"md/478808031.md","ref":"./md/478808031.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zlx","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"daily study","language":"zh-hans","gitbook":"3.2.3","description":"git book for daily study"},"file":{"path":"md/478218936.md","mtime":"2019-12-19T02:38:43.198Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-19T02:38:44.372Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
