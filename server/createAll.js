@@ -66,16 +66,3 @@ module.exports = function createAll() {
     }
   })
 }
-
-var arr = [1, 2, 3]
-var list = []
-arr.forEach((i, index) => {
-  var p = new Promise((resolve) => {
-    resolve({name: i, val: index})
-  })
-  list.push(p)
-})
-
-Promise.all(list).then((a, b) => {
-  console.log(a, b, '77')
-})
