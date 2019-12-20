@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>83. 递归函数输出是什么，为什么？ · daily study</title>
+        <title>99.场景分析 · daily study</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="527763739.html" />
+    <link rel="next" href="539469366.html" />
     
     
-    <link rel="prev" href="529069818.html" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="540682906.html">
+        <li class="chapter active" data-level="1.2" data-path="540682906.html">
             
                 <a href="540682906.html">
             
@@ -310,7 +310,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.18" data-path="528443361.html">
+        <li class="chapter " data-level="1.18" data-path="528443361.html">
             
                 <a href="528443361.html">
             
@@ -1419,7 +1419,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >83. 递归函数输出是什么，为什么？</a>
+        <a href=".." >99.场景分析</a>
     </h1>
 </div>
 
@@ -1434,58 +1434,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="83-&#x9012;&#x5F52;&#x51FD;&#x6570;&#x8F93;&#x51FA;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;">83. &#x9012;&#x5F52;&#x51FD;&#x6570;&#x8F93;&#x51FA;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;</h1>
-<p> function foo(i) {
-  if (i &lt; 0)
-  return;
-  console.log(i);
-  foo(i - 1);
-  console.log(i);
-}
-foo(3);</p>
+                                <h1 id="99&#x573A;&#x666F;&#x5206;&#x6790;">99.&#x573A;&#x666F;&#x5206;&#x6790;</h1>
+<p> &#x65E5;&#x5E38;&#x8BBF;&#x95EE;&#x7F51;&#x7AD9;&#x8FC7;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x7F51;&#x7EDC;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x6162;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x6709;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x7684;&#x9875;&#x9762;&#x5C31;&#x662F;&#x51FA;&#x73B0;&#x9875;&#x9762;&#x6296;&#x52A8;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x5373;&#x56FE;&#x7247;&#x672A;&#x52A0;&#x8F7D;&#x5B8C;&#x65F6;&#x9AD8;&#x5EA6;&#x4E3A;0&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x5143;&#x7D20;&#x4F1A;&#x5148;&#x5360;&#x7528;&#x56FE;&#x7247;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7B49;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5B8C;&#x540E;&#x9875;&#x9762;&#x518D;&#x91CD;&#x6392;&#xFF0C;&#x8FD9;&#x6837;&#x5BF9;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x662F;&#x4E0D;&#x6709;&#x597D;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x9488;&#x5BF9;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4F60;&#x6709;&#x4EC0;&#x4E48;&#x60F3;&#x6CD5;&#x5462;&#xFF1F;</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-html">//  &#x60F3;&#x60F3; .inner_box &#x7684;&#x9AD8;&#x5EA6;&#x662F;&#x591A;&#x5C11;&#xFF0C;&#x56FA;&#x5B9A;&#x5417;&#xFF1F;
+<span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.box</span> {
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    }
+    <span class="hljs-selector-class">.inner_box</span> {
+      <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">20%</span>;
+      <span class="hljs-attribute">background</span>: red;
+    }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner_box&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
 <hr>
 <h2 id="zlx362211854">zlx362211854</h2>
 <blockquote>
-<p>commented 24 days ago </p>
-</blockquote>
-<p>&#x8F93;&#x51FA;&#x987A;&#x5E8F;&#x4E3A;&#xFF1A;3&#xFF0C;2&#xFF0C;1&#xFF0C;0&#xFF0C;0&#xFF0C;1&#xFF0C;2&#xFF0C;3</p>
-<h4 id="&#x4E00;&#x5F20;&#x56FE;&#x89E3;&#x91CA;">&#x4E00;&#x5F20;&#x56FE;&#x89E3;&#x91CA;</h4>
-<p><img src="https://user-images.githubusercontent.com/22437181/69688568-6677fb00-1101-11ea-8f19-8a41cf737ffe.png" alt="image"></p>
-<h4 id="&#x5C3E;&#x9012;&#x5F52;&#x4F18;&#x5316;">&#x5C3E;&#x9012;&#x5F52;&#x4F18;&#x5316;</h4>
-<p>&#x9274;&#x4E8E;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x7684;&#x8FD9;&#x4E00;&#x7279;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x9012;&#x5F52;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x5C3E;&#x9012;&#x5F52;&#x4F18;&#x5316;&#x3002;
-&#x4EC0;&#x4E48;&#x662F;&#x5C3E;&#x9012;&#x5F52;&#x4F18;&#x5316;&#xFF1F;</p>
-<blockquote>
-<p>&#x82E5;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5728;&#x5C3E;&#x4F4D;&#x7F6E;&#x8C03;&#x7528;&#x672C;&#x8EAB;&#xFF08;&#x6216;&#x662F;&#x4E00;&#x4E2A;&#x5C3E;&#x8C03;&#x7528;&#x672C;&#x8EAB;&#x7684;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x7B49;&#xFF09;&#xFF0C;&#x5219;&#x79F0;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E3A;&#x5C3E;&#x9012;&#x5F52;&#xFF0C;&#x662F;&#x9012;&#x5F52;&#x7684;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x60C5;&#x5F62;&#x3002;&#x800C;&#x5F62;&#x5F0F;&#x4E0A;&#x53EA;&#x8981;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;return&#x8BED;&#x53E5;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x5C31;&#x662F;&#x5C3E;&#x9012;&#x5F52;&#x3002;
-&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x9636;&#x4E58;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>commented an hour ago </p>
 </blockquote>
 <ul>
-<li>&#x5E38;&#x89C4;&#x5B9E;&#x73B0;&#xFF1A;</li>
+<li>&#x4F7F;&#x7528;padding-bottom&#x6765;&#x5360;&#x4F4D;</li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loop</span>(<span class="hljs-params">num</span>) </span>{
-      <span class="hljs-keyword">if</span> (num === <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-      <span class="hljs-keyword">return</span> num * loop(num - <span class="hljs-number">1</span>) <span class="hljs-comment">// &#x51FD;&#x6570;&#x5C3E;&#x90E8;&#x662F;&#x4E00;&#x4E2A;js&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4E0D;&#x662F;&#x7EAF;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;</span>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;ie=edge&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-comment">/* &#x76D2;&#x5B50;&#x5C42; */</span>
+    <span class="hljs-selector-class">.box</span> {
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">800px</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">600px</span>;
     }
-    loop(<span class="hljs-number">4</span>)
-</code></pre>
-<ul>
-<li>&#x5C3E;&#x9012;&#x5F52;&#x4F18;&#x5316;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-js"> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loop</span>(<span class="hljs-params">prev, result</span>) </span>{
-      <span class="hljs-keyword">if</span> (!result) result = <span class="hljs-number">1</span>;
-      <span class="hljs-keyword">if</span> (prev === <span class="hljs-number">1</span>) {
-        <span class="hljs-keyword">return</span> result
-      }
-      <span class="hljs-keyword">return</span> loop(prev - <span class="hljs-number">1</span>, prev * result) <span class="hljs-comment">// &#x51FD;&#x6570;&#x5C3E;&#x90E8;&#x53EA;&#x6709;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD9;&#x6837;&#x6808;&#x5185;&#x4E0D;&#x4F1A;&#x65B0;&#x589E;&#x5185;&#x5BB9;</span>
+    <span class="hljs-comment">/* &#x5360;&#x4F4D;&#x5C42;&#xFF0C;&#x901A;&#x8FC7;padding-bottom&#x5E2E;&#x5FD9;&#x5360;&#x4F4F;&#x56FE;&#x7247;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#xFF08;600 / 800 = 75%&#xFF09; */</span>
+    <span class="hljs-selector-class">.box</span><span class="hljs-selector-pseudo">::after</span> {
+      <span class="hljs-attribute">content</span>: <span class="hljs-string">&apos;&apos;</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">75%</span>;
     }
-    loop(<span class="hljs-number">3</span>)
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://tva1.sinaimg.cn/large/006tNbRwgy1ga3813qmnuj30m80go0uk.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x56FE;&#x7247;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x5B57;&#x56FE;&#x7247;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x5B57;&#x56FE;&#x7247;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x5B57;&#x56FE;&#x7247;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x5B57;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<h2 id="goldeli">goldEli</h2>
-<blockquote>
-<p>commented 24 days ago </p>
-</blockquote>
-<p>&#x8F93;&#x51FA;&#x987A;&#x5E8F;&#xFF1A;3&#xFF0C;2&#xFF0C;1&#xFF0C;0&#xFF0C;0&#xFF0C;1&#xFF0C;2&#xFF0C;3</p>
-<p>&#x9012;&#x5F52;&#x51FD;&#x6570;&#x4E0D;&#x505C;&#x5730;&#x8C03;&#x52A8;&#x81EA;&#x8EAB;&#x5E76;&#x62BC;&#x5165;&#x6808;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x4E0B;&#x52A8;&#x56FE;&#xFF1A;</p>
-<p><img src="https://user-images.githubusercontent.com/18217162/69637812-5f66d380-1094-11ea-956e-1924ea815db5.gif" alt="2"></p>
 
                                 
                                 </section>
@@ -1513,12 +1524,12 @@ foo(3);</p>
 
             
                 
-                <a href="529069818.html" class="navigation navigation-prev " aria-label="Previous page: 84.V8 引擎如何进行垃圾内存的回收">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="527763739.html" class="navigation navigation-next " aria-label="Next page: 82. useCallback vs useMemo">
+                <a href="539469366.html" class="navigation navigation-next " aria-label="Next page: 98. 说一说一些常见的跨域场景">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1529,7 +1540,7 @@ foo(3);</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"83. 递归函数输出是什么，为什么？","level":"1.18","depth":1,"next":{"title":"82. useCallback vs useMemo","level":"1.19","depth":1,"path":"md/527763739.md","ref":"./md/527763739.md","articles":[]},"previous":{"title":"84.V8 引擎如何进行垃圾内存的回收","level":"1.17","depth":1,"path":"md/529069818.md","ref":"./md/529069818.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zlx","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"daily study","language":"zh-hans","gitbook":"3.2.3","description":"git book for daily study"},"file":{"path":"md/528443361.md","mtime":"2019-12-20T08:54:11.331Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-20T08:54:12.891Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"99.场景分析","level":"1.2","depth":1,"next":{"title":"98. 说一说一些常见的跨域场景","level":"1.3","depth":1,"path":"md/539469366.md","ref":"./md/539469366.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zlx","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"daily study","language":"zh-hans","gitbook":"3.2.3","description":"git book for daily study"},"file":{"path":"md/540682906.md","mtime":"2019-12-20T08:54:11.331Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-20T08:54:12.891Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
