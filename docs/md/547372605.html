@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>54.给定两个数组，写一个方法来计算它们的交集和并集 · daily study</title>
+        <title>110. react16 的diff算法相较于15有什么改动？ · daily study</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="506136264.html" />
+    <link rel="next" href="546530598.html" />
     
     
-    <link rel="prev" href="506945745.html" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="547372605.html">
+        <li class="chapter active" data-level="1.2" data-path="547372605.html">
             
                 <a href="547372605.html">
             
@@ -830,7 +830,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.58" data-path="506410702.html">
+        <li class="chapter " data-level="1.58" data-path="506410702.html">
             
                 <a href="506410702.html">
             
@@ -1432,7 +1432,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >54.给定两个数组，写一个方法来计算它们的交集和并集</a>
+        <a href=".." >110. react16 的diff算法相较于15有什么改动？</a>
     </h1>
 </div>
 
@@ -1447,108 +1447,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="54&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#x5B83;&#x4EEC;&#x7684;&#x4EA4;&#x96C6;&#x548C;&#x5E76;&#x96C6;">54.&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#x5B83;&#x4EEC;&#x7684;&#x4EA4;&#x96C6;&#x548C;&#x5E76;&#x96C6;</h1>
+                                <h1 id="110-react16-&#x7684;diff&#x7B97;&#x6CD5;&#x76F8;&#x8F83;&#x4E8E;15&#x6709;&#x4EC0;&#x4E48;&#x6539;&#x52A8;&#xFF1F;">110. react16 &#x7684;diff&#x7B97;&#x6CD5;&#x76F8;&#x8F83;&#x4E8E;15&#x6709;&#x4EC0;&#x4E48;&#x6539;&#x52A8;&#xFF1F;</h1>
 <hr>
-<h2 id="zlx362211854">zlx362211854</h2>
-<blockquote>
-<p>commented 3 months ago </p>
-</blockquote>
-<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filt</span>(<span class="hljs-params">type, ...rest</span>) </span>{
-  <span class="hljs-keyword">const</span> result = []
-  <span class="hljs-keyword">const</span> all = [].concat(...rest)
-  <span class="hljs-keyword">if</span> (type === <span class="hljs-string">&apos;sdiff&apos;</span>) {
-    <span class="hljs-comment">//&#x4EA4;&#x96C6;</span>
-    all.forEach(i =&gt; {
-      <span class="hljs-keyword">let</span> common = <span class="hljs-literal">true</span>
-      rest.forEach(l =&gt; {
-        <span class="hljs-keyword">if</span> (!l.includes(i)) {
-          common = <span class="hljs-literal">false</span>
-        }
-      })
-      common &amp;&amp; result.push(i)
-    })
-    <span class="hljs-keyword">return</span> [...new <span class="hljs-built_in">Set</span>(result)]
-  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (type === <span class="hljs-string">&apos;union&apos;</span>) {
-    <span class="hljs-comment">//&#x5E76;&#x96C6;</span>
-    <span class="hljs-keyword">return</span> [...new <span class="hljs-built_in">Set</span>(all)]
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;Wrong calculation type!&apos;</span>)
-  }
-}
-filt(<span class="hljs-string">&apos;sdiff&apos;</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">3</span>]) <span class="hljs-comment">// [2, 3]</span>
-filt(<span class="hljs-string">&apos;union&apos;</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">3</span>]) <span class="hljs-comment">// [1, 2, 3, 4, 5]</span>
-</code></pre>
-<h2 id="roxy0724">roxy0724</h2>
-<blockquote>
-<p>commented 3 months ago </p>
-</blockquote>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> array = (arr1, arr2)=&gt;{
-  <span class="hljs-keyword">const</span> mixed = arr1.filter(item=&gt;arr2.indexOf(item)!==<span class="hljs-number">-1</span>)||[]
-  <span class="hljs-keyword">const</span> union = [...new <span class="hljs-built_in">Set</span>(arr1.concat(arr2))] || []
-  <span class="hljs-keyword">return</span> <span class="hljs-string">`&#x4EA4;&#x96C6;&#xFF1A;<span class="hljs-subst">${mixed}</span>,&#x5E76;&#x96C6;&#xFF1A;<span class="hljs-subst">${union}</span>`</span>
-}
-<span class="hljs-built_in">console</span>.log(array([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">5</span>]))<span class="hljs-comment">//&#x4EA4;&#x96C6;&#xFF1A;3,&#x5E76;&#x96C6;&#xFF1A;1,2,3,5</span>
-</code></pre>
-<h2 id="o1wish">o1wish</h2>
-<blockquote>
-<p>commented 3 months ago </p>
-</blockquote>
-<pre><code class="lang-javascript">      <span class="hljs-keyword">const</span> Intersection = (...params) =&gt; {
-        <span class="hljs-keyword">const</span> finalize = [];
-        <span class="hljs-keyword">const</span> [original, ...others] = [...params];
-        others.forEach(v =&gt; {
-          finalize.push(...v);
-        });
-        <span class="hljs-keyword">return</span> original.filter(v =&gt; finalize.indexOf(v) !== <span class="hljs-number">-1</span>);
-      };
-
-      <span class="hljs-keyword">const</span> Union = (...params) =&gt; {
-        <span class="hljs-keyword">const</span> finalize = [];
-        params.forEach(v =&gt; {
-          finalize.push(...v);
-        });
-        <span class="hljs-keyword">return</span> [...new <span class="hljs-built_in">Set</span>(finalize)];
-      };
-
-      <span class="hljs-built_in">console</span>.log(Intersection([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>]));
-      <span class="hljs-built_in">console</span>.log(Union([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>]));
-</code></pre>
-<h2 id="goldeli">goldEli</h2>
-<blockquote>
-<p>commented 3 months ago </p>
-</blockquote>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]
-<span class="hljs-keyword">var</span> arr2 = [<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]
-
-<span class="hljs-keyword">var</span> mark = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">arrs</span>) </span>{
-  <span class="hljs-keyword">var</span> o = {}
-  arrs.forEach(arr =&gt; {
-    arr.forEach(item =&gt; {
-      <span class="hljs-keyword">if</span> (o[item]) {
-        o[item] += <span class="hljs-number">1</span>
-      } <span class="hljs-keyword">else</span> {
-        o[item] = <span class="hljs-number">1</span>
-      }
-    });
-  });
-  <span class="hljs-keyword">return</span> o
-}
-
-<span class="hljs-comment">// &#x4EA4;&#x96C6;</span>
-<span class="hljs-keyword">var</span> innersection = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">arrs</span>) </span>{
-  <span class="hljs-keyword">var</span> o = mark(arrs)
-  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(o).filter(key =&gt; o[key]&gt;<span class="hljs-number">1</span>).map(key =&gt; key)
-}
-<span class="hljs-comment">// &#x5E76;&#x96C6;</span>
-<span class="hljs-keyword">var</span> union = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">arrs</span>) </span>{
-  <span class="hljs-keyword">var</span> o = mark(arrs)
-  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(o).map(key =&gt; key)
-}
-<span class="hljs-built_in">console</span>.log(innersection([arr1, arr2]))
-<span class="hljs-comment">// =&gt; [ &apos;3&apos;, &apos;4&apos; ]</span>
-<span class="hljs-built_in">console</span>.log(union([arr1, arr2]))
-<span class="hljs-comment">// =&gt; [ &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos; ]</span>
-</code></pre>
 
                                 
                                 </section>
@@ -1576,12 +1476,12 @@ filt(<span class="hljs-string">&apos;union&apos;</span>, [<span class="hljs-numb
 
             
                 
-                <a href="506945745.html" class="navigation navigation-prev " aria-label="Previous page: 55.谈谈对 CSP（Content Security Policy） 的理解">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="506136264.html" class="navigation navigation-next " aria-label="Next page: 53. 说说浏览器的缓存机制">
+                <a href="546530598.html" class="navigation navigation-next " aria-label="Next page: 109. 冒泡排序">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1592,7 +1492,7 @@ filt(<span class="hljs-string">&apos;union&apos;</span>, [<span class="hljs-numb
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"54.给定两个数组，写一个方法来计算它们的交集和并集","level":"1.58","depth":1,"next":{"title":"53. 说说浏览器的缓存机制","level":"1.59","depth":1,"path":"md/506136264.md","ref":"./md/506136264.md","articles":[]},"previous":{"title":"55.谈谈对 CSP（Content Security Policy） 的理解","level":"1.57","depth":1,"path":"md/506945745.md","ref":"./md/506945745.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zlx","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"daily study","language":"zh-hans","gitbook":"3.2.3","description":"git book for daily study"},"file":{"path":"md/506410702.md","mtime":"2020-01-09T17:01:11.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-09T17:01:19.279Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"110. react16 的diff算法相较于15有什么改动？","level":"1.2","depth":1,"next":{"title":"109. 冒泡排序","level":"1.3","depth":1,"path":"md/546530598.md","ref":"./md/546530598.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zlx","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"daily study","language":"zh-hans","gitbook":"3.2.3","description":"git book for daily study"},"file":{"path":"md/547372605.md","mtime":"2020-01-09T17:01:11.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-09T17:01:19.279Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
