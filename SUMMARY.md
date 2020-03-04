@@ -1,4 +1,6 @@
 
+* [133. 画一个loading图标](./md/575065872.md)
+* [132. 将类改写成函数](./md/574344975.md)
 * [131. tcp和udp的区别](./md/572485493.md)
 * [130. 自动生成括号](./md/571800324.md)
 * [129. js如何多继承？](./md/571037278.md)
@@ -97,5 +99,3 @@
 * [36. word-wrap、word-break和white-space有什么区别？](./md/491347654.md)
 * [35. 介绍下REST api和GraphQL api](./md/490834134.md)
 * [34.svg和canvas的概念和区别](./md/490141729.md)
-* [33. 介绍下 BFC、IFC、GFC 和 FFC](./md/489421010.md)
-* [32. 说说transition、animation、transform的作用](./md/488949432.md)
