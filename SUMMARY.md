@@ -1,4 +1,5 @@
 
+* [134. 两个数反转](./md/578387235.md)
 * [133. 画一个loading图标](./md/575065872.md)
 * [132. 将类改写成函数](./md/574344975.md)
 * [131. tcp和udp的区别](./md/572485493.md)
@@ -98,4 +99,3 @@
 * [37. Webpack篇 —— 什么是 Tree Shaking ?](./md/491980672.md)
 * [36. word-wrap、word-break和white-space有什么区别？](./md/491347654.md)
 * [35. 介绍下REST api和GraphQL api](./md/490834134.md)
-* [34.svg和canvas的概念和区别](./md/490141729.md)
