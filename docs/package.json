@@ -4,7 +4,7 @@
   "description": "<!--  * @Author: zlx  * @Date: 2019-12-10 10:07:21  * @LastEditors: zlx  * @LastEditTime: 2019-12-17 14:05:39  * @Description:   --> # Introduction",
   "main": "index.js",
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-schedule": "^1.3.2",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.8"
